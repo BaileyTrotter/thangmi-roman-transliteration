@@ -4,6 +4,10 @@
 from collections import OrderedDict
 
 d2r_dict=OrderedDict([
+#deletes U+200D ZERO WIDTH JOINER [ZWJ] and U+200C ZERO WIDTH NON-JOINER [ZWNJ] which were showing up untransliterated
+('‍', ''),
+('‌', ''), 
+    
 ('ँ', ' ̃'),
 
 ('ख्', 'kh'),
@@ -459,9 +463,6 @@ d2r_dict=OrderedDict([
 ('e ̃', 'ẽ'),
 ('o ̃', 'õ'),
 ('a ̃', 'ã'),
-#deletes U+200D ZERO WIDTH JOINER [ZWJ] and U+200C ZERO WIDTH NON-JOINER [ZWNJ] which were showing up untransliterated
-('‍', ''),
-('‌', ''),
 ])
 
 def is_devanagari(text):
